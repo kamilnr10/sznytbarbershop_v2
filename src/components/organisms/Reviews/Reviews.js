@@ -126,8 +126,8 @@ const ReviewWrapper = styled.div`
   p:nth-of-type(2) {
     padding: 0 0 20px 0;
 
-    @media (min-width: 810px) {
-      font-size: 9px;
+    @media (min-width: 1500px) {
+      font-size: 11px;
     }
   }
 `;

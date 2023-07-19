@@ -43,7 +43,7 @@ export const TextConainer = styled.div`
 
     @media (min-width: 1500px) {
       padding: 0 0 0 0;
-      font-size: 10px;
+      font-size: 11px;
       line-height: 1.4;
     }
   }
