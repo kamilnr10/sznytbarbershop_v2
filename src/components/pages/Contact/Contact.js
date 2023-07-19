@@ -4,6 +4,7 @@ import styled from "styled-components";
 const ContactContainer = styled.section`
   width: 100vw;
   height: 100vh;
+  margin: 80px 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
