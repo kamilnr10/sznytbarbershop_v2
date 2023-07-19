@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend+Zetta:wght@200;900&family=Six+Caps&family=Teko:wght@700&display=swap');
 
 :root {
   --font-family-headings: "Quicksand", sans-serif;
@@ -70,6 +69,7 @@ body {
   p {
     font-family: "Lexend Zetta", sans-serif;
     font-weigth: 900;
+    font-size: 12px;
 }
 `;
 

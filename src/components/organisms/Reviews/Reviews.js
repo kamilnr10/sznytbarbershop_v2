@@ -4,7 +4,9 @@ import axios from "axios";
 import Slider from "react-animated-slider";
 import StarRatings from "react-star-ratings";
 
-const ReviewsContainer = styled.div``;
+const ReviewsContainer = styled.div`
+  padding: 0 5%;
+`;
 
 const ReviewsSlider = styled.div`
   .slider {
@@ -13,6 +15,10 @@ const ReviewsSlider = styled.div`
     height: 600px;
     margin: 0 auto;
     overflow: hidden;
+
+    @media (min-width: 810px) {
+      height: 300px;
+    }
   }
 
   .slider a.previousButton,
@@ -95,9 +101,6 @@ const ReviewsSlider = styled.div`
   .slide.animateOut.next {
     left: -100%;
   }
-  p {
-    font-size: 14px;
-  }
 `;
 
 const ReviewWrapper = styled.div`
@@ -106,13 +109,21 @@ const ReviewWrapper = styled.div`
   flex-direction: column;
 
   p:nth-of-type(1) {
-    font-size: 15px;
+    /* font-size: 15px; */
     font-weight: 900;
     padding: 0 0 20px 0;
+
+    @media (min-width: 810px) {
+      font-size: 10px;
+    }
   }
 
   p:nth-of-type(2) {
     padding: 0 0 20px 0;
+
+    @media (min-width: 810px) {
+      font-size: 9px;
+    }
   }
 `;
 
@@ -121,6 +132,11 @@ const ImgWrapper = styled.div`
   height: 80px;
   padding: 0 0 20px 0;
   margin: 0 auto;
+
+  @media (min-width: 810px) {
+    width: 50px;
+    height: 70px;
+  }
 
   img {
     width: 100%;
@@ -154,10 +170,9 @@ const Reviews = () => {
       });
       const data = await response.json();
       //   console.log(data.result.reviews);
-      console.log(API_KEY);
+
       setReviews(data.result.reviews);
       setLoading(false);
-      console.log(reviews);
     } catch (err) {
       console.log(err);
     }
@@ -167,8 +182,6 @@ const Reviews = () => {
     fetchReviews();
   }, []);
 
-  //   console.log(reviews.result.reviews);
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -177,7 +190,13 @@ const Reviews = () => {
     <ReviewsContainer>
       <h1>Reviews</h1>
       <ReviewsSlider>
-        <Slider direction="vertical" autoplay={3000} previousButton nextButton>
+        <Slider
+          direction="vertical"
+          autoplay={3000}
+          previousButton
+          nextButton
+          touchDisabled
+        >
           {reviews.map((item) => (
             <ReviewWrapper key={item.time}>
               <ImgWrapper>

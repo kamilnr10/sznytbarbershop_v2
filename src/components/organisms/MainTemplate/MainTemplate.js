@@ -4,7 +4,7 @@ import Navigation from "../../organisms/Navigation/Navigation";
 
 const Wrapper = styled.div`
   position: relative;
-  padding: 0 5%;
+  /* padding: 0 5%; */
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   @media (min-width: 810px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto, auto, auto);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 

@@ -7,10 +7,11 @@ export const TextConainer = styled.div`
   -moz-box-shadow: 0px -38px 56px 36px rgba(0, 0, 0, 1);
   box-shadow: 0px -38px 56px 36px rgba(0, 0, 0, 1);
   z-index: 1;
+  padding: 0 5%;
 
   @media (min-width: 810px) {
     margin: 80px 0 0;
-    padding: 0 40px;
+    padding: 0 30px;
   }
   h1 {
     /* margin: 20px 0; */

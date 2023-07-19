@@ -19,6 +19,7 @@ const TickerContainer = styled.div`
   }
 
   .slider {
+    height: 80vh;
     @media (min-width: 810px) {
       height: 100%;
     }
@@ -53,7 +54,6 @@ const TickerSection = () => {
         nextButton
         previousButton
         touchDisabled="true"
-        disabled
       >
         {slides.map((item, index) => (
           <ImgContainer key={index}>

@@ -13,7 +13,7 @@ export const NavigationWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 10px;
+  padding: 0 5%;
   -webkit-box-shadow: inset 0px 12px 16px -3px #000000;
   -moz-box-shadow: inset 0px 12px 16px -3px #000000;
   box-shadow: inset 0px 12px 16px -3px #28282d;
@@ -23,6 +23,10 @@ export const NavigationWrapper = styled.div`
 
   @media screen and (min-width: 420px) {
     top: 0;
+  }
+
+  @media (min-width: 810px) {
+    padding: 0 10%;
   }
 `;
 
