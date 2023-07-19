@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GlobalStyle from "./assets/globalStyles";
+import Navigation from "./components/organisms/Navigation/Navigation";
+import MainTemplate from "./components/organisms/MainTemplate/MainTemplate";
+import TickerSection from "./components/organisms/TickerSection/TickerSection";
+import OurStory from "./components/organisms/OurStory/OurStory";
+import Reviews from "./components/organisms/Reviews/Reviews";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyle />
+      <MainTemplate>
+        <TickerSection />
+        <OurStory />
+        <Reviews />
+        <div style={{ backgroundColor: "yellow" }}>SECTION 4</div>
+      </MainTemplate>
     </div>
   );
 }
