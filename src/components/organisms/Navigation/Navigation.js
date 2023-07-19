@@ -56,7 +56,7 @@ const Navigation = () => {
           <ul>
             <li>
               <span>01</span>
-              <a href="#team" onClick={() => setNavOpen(false)}>
+              <a href="/team" onClick={() => setNavOpen(false)}>
                 Team
               </a>
             </li>
