@@ -5,6 +5,7 @@ import MainTemplate from "./components/organisms/MainTemplate/MainTemplate";
 import TickerSection from "./components/organisms/TickerSection/TickerSection";
 import OurStory from "./components/organisms/OurStory/OurStory";
 import Reviews from "./components/organisms/Reviews/Reviews";
+import VideoSection from "./components/organisms/VideoSection/VideoSection";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <TickerSection />
         <OurStory />
         <Reviews />
-        <div style={{ backgroundColor: "yellow" }}>SECTION 4</div>
+        <VideoSection />
       </MainTemplate>
     </div>
   );

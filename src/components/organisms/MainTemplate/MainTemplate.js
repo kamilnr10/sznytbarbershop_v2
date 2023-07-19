@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto auto 100px 100px;
+  grid-template-rows: 1fr auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
     "."

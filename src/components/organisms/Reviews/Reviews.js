@@ -133,9 +133,7 @@ const StarsWrapper = styled.div`
 `;
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-// const API_KEY = "AIzaSyBuhiuCXHoOFwduOOLN9PXiSKBRv8kCCLA";
 const PLACE_ID = process.env.REACT_APP_PLACE_ID;
-// const PLACE_ID = "ChIJH7IdKdjNHkcR2PAeasiTBv0";
 const HEROKU_URL = "https://cors-anywhere.herokuapp.com/";
 const urlOK = `${HEROKU_URL}https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,reviews&key=${API_KEY}`;
 
