@@ -9,6 +9,7 @@ import Reviews from "./components/organisms/Reviews/Reviews";
 import VideoSection from "./components/organisms/VideoSection/VideoSection";
 import Team from "./components/pages/Team/Team";
 import Works from "./components/pages/Gallery/Gallery";
+import Contact from "./components/pages/Contact/Contact";
 
 const Home = () => {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Works />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </MainTemplate>
     </div>

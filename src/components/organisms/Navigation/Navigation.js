@@ -71,9 +71,9 @@ const Navigation = () => {
             </li>
             <li>
               <span>03</span>
-              <a href="#contact" onClick={() => setNavOpen(false)}>
+              <Link to="/contact" onClick={() => setNavOpen(false)}>
                 Contact
-              </a>
+              </Link>
             </li>
             <li>
               <span>04</span>
