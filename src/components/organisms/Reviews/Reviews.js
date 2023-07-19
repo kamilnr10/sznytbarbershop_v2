@@ -6,6 +6,11 @@ import StarRatings from "react-star-ratings";
 
 const ReviewsContainer = styled.div`
   padding: 0 5%;
+
+  @media (min-width: 1200px) {
+    margin: 80px 0 0 0;
+    padding: 0 30px;
+  }
 `;
 
 const ReviewsSlider = styled.div`

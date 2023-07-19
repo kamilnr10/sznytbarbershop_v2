@@ -37,6 +37,19 @@ const Wrapper = styled.div`
       grid-area: 3 / 2 / 4 / 3;
     }
   }
+
+  @media (min-width: 1200px) {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 1fr 1fr;
+    grid-template-rows: 60% 40%;
+    gap: 0px 0px;
+    grid-template-areas:
+      "TickerSection OurStory Reviews"
+      "TickerSection VideoSection VideoSection";
+    overflow: hidden;
+  }
 `;
 
 const MainTemplate = ({ children }) => {

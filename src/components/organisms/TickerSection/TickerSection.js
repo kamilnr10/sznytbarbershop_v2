@@ -18,10 +18,20 @@ const TickerContainer = styled.div`
     grid-area: 1 / 1 / 4 / 2;
   }
 
+  @media (min-width: 1200px) {
+    /* grid-area: 60% / 1 / 4 / 2; */
+  }
+
   .slider {
     height: 80vh;
     @media (min-width: 810px) {
       height: 100%;
+    }
+
+    @media (min-width: 1200px) {
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
     }
   }
 

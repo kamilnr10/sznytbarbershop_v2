@@ -13,9 +13,17 @@ export const TextConainer = styled.div`
     margin: 80px 0 0;
     padding: 0 30px;
   }
+
+  @media (min-width: 1200px) {
+    /* width: 300px; */
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
   h1 {
     /* margin: 20px 0; */
-    font-size: 80px;
+    /* font-size: 80px; */
   }
   p {
     padding: 0 0 20px 0;
@@ -25,6 +33,18 @@ export const TextConainer = styled.div`
 
     @media (min-width: 810px) {
       font-size: 10px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 9px;
+      line-height: 1.3;
+      padding: 0 0 5px 0;
+    }
+
+    @media (min-width: 1500px) {
+      padding: 0 0 0 0;
+      font-size: 10px;
+      line-height: 1.4;
     }
   }
 `;

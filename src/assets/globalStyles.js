@@ -53,6 +53,11 @@ body {
     color: #fff;
     margin: 20px 0;
     font-size: 80px;
+
+    @media (min-width: 1200px) {
+      margin: 20px 0;
+      font-size: 60px;
+    }
     
    /* font-size: var(--font-size-h1); */
      /* font-size: calc(84px + 50.390625vw); */
@@ -70,6 +75,10 @@ body {
     font-family: "Lexend Zetta", sans-serif;
     font-weigth: 900;
     font-size: 12px;
+
+    @media (min-width: 1200px) {
+     
+    }
 }
 `;
 
