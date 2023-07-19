@@ -3,11 +3,18 @@ import styled from "styled-components";
 
 const ContactContainer = styled.section`
   width: 100vw;
-  height: 100vh;
-  margin: 80px 0 0;
+  /* height: 100vh; */
+  margin: 90px 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+
+  @media (min-width: 810px) {
+    height: 100vh;
+    margin: 0;
+    overflow-x: auto;
+  }
 
   .card {
     width: 70%;
