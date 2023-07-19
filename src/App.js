@@ -8,6 +8,7 @@ import OurStory from "./components/organisms/OurStory/OurStory";
 import Reviews from "./components/organisms/Reviews/Reviews";
 import VideoSection from "./components/organisms/VideoSection/VideoSection";
 import Team from "./components/pages/Team/Team";
+import Works from "./components/pages/Gallery/Gallery";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/gallery" element={<Works />} />
         </Routes>
       </MainTemplate>
     </div>

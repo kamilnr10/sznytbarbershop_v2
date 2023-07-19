@@ -65,9 +65,9 @@ const Navigation = () => {
             </li>
             <li>
               <span>02</span>
-              <a href="#gallery" onClick={() => setNavOpen(false)}>
+              <Link to="/gallery" onClick={() => setNavOpen(false)}>
                 Gallery
-              </a>
+              </Link>
             </li>
             <li>
               <span>03</span>
