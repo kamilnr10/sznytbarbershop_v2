@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 import { LockScreen } from "../../atoms/LockScreen/LockScreen";
 import { debounce } from "../../../helpers/debounce";
@@ -43,7 +44,9 @@ const Navigation = () => {
   return (
     <NavigationWrapper visible={visible}>
       <ImgWrapper>
-        <Image src={logo} alt="" />
+        <Link to="/">
+          <Image src={logo} alt="" />
+        </Link>
       </ImgWrapper>
       <MenuToggle onClick={() => setNavOpen(!navOpen)}>
         <HamBox navOpen={navOpen}>
@@ -56,9 +59,9 @@ const Navigation = () => {
           <ul>
             <li>
               <span>01</span>
-              <a href="/team" onClick={() => setNavOpen(false)}>
+              <Link to="/team" onClick={() => setNavOpen(false)}>
                 Team
-              </a>
+              </Link>
             </li>
             <li>
               <span>02</span>

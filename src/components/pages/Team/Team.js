@@ -2,7 +2,8 @@ import styled from "styled-components";
 import React, { useRef, useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -20,6 +21,10 @@ const TeamContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 810px) {
+    height: 100vh;
+  }
 
   div {
     /* border-radius: 10%; */
@@ -62,12 +67,12 @@ const MemberContainer = styled.div`
 
   @media (min-width: 1200px) {
     width: 350px;
-    height: 100%;
+    height: 600px;
   }
 
   @media (min-width: 1600px) {
     width: 400px;
-    height: 650px;
+    height: 750px;
   }
 `;
 
@@ -75,6 +80,23 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  div {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+
+    &:last-of-type {
+      justify-content: end;
+    }
+    a {
+      margin: 0 right;
+      text-align: right;
+      width: 30px;
+      height: 30px;
+    }
+  }
 `;
 
 const Team = () => {
@@ -91,14 +113,14 @@ const Team = () => {
           Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
         },
         body: JSON.stringify({
-          query: "{ allTeams { id name job description image {id url} } }",
+          query:
+            "{ allTeams { id name job description instagram image {id url} } }",
         }),
       });
 
       const myData = await response.json();
 
       setData(myData.data.allTeams.reverse());
-      console.log(myData.data.allTeams);
       setLoading(false);
     } catch (error) {
       console.error("Błąd pobierania danych:", error);
@@ -137,11 +159,15 @@ const Team = () => {
             <MemberContainer>
               <img src={member.image.url} />
               <InfoContainer>
-                <p>{member.name}</p>
-                <p>{member.job}</p>
                 <div>
-                  <a href={member?.instagram} target="_blank">
-                    IG
+                  <p>{member.name}</p>
+                </div>
+                <div>
+                  <p>{member.job}</p>
+                </div>
+                <div>
+                  <a href={member.instagram} target="_blank">
+                    <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </div>
               </InfoContainer>
