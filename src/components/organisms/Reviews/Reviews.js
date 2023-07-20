@@ -155,7 +155,8 @@ const StarsWrapper = styled.div`
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const PLACE_ID = process.env.REACT_APP_PLACE_ID;
-const HEROKU_URL = "https://cors-anywhere.herokuapp.com/";
+// const HEROKU_URL = "https://cors-anywhere.herokuapp.com/";
+const HEROKU_URL = "https://proxy.cors.sh/";
 const urlOK = `${HEROKU_URL}https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,reviews&key=${API_KEY}`;
 
 const Reviews = () => {
@@ -169,6 +170,7 @@ const Reviews = () => {
         mode: "cors",
         headers: {
           "Content-Type": "application/json",
+          "x-cors-api-key": "temp_558e9c537b69d88e63a8935637ad0d69",
           Accept: "application/json",
           //   "Access-Control-Allow-Origin": "http://localhost:3000",
         },
