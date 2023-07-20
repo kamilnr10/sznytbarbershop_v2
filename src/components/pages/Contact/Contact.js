@@ -17,12 +17,17 @@ const ContactContainer = styled.section`
   }
 
   .card {
-    width: 70%;
+    width: 90%;
     padding: 30px 90px 90px 90px;
     border: 6px solid rgba(126, 26, 208, 0.988);
-    box-shadow: 20px 20px 0 rgba(126, 26, 208, 0.497);
+    box-shadow: 10px 10px 0 rgba(126, 26, 208, 0.497);
     border-radius: 50px;
     position: relative;
+
+    @media (min-width: 810px) {
+        width: 70%;
+        box-shadow: 20px 20px 0 rgba(126, 26, 208, 0.497);
+    }
   }
 
   .card h2 {
@@ -43,10 +48,13 @@ const ContactContainer = styled.section`
   .card .row .col {
     position: relative;
     width: 100%;
-    margin: 30px 20px 40px 0;
+    margin: 20px 10px 20px 0;
     transition: 0.5s;
 
-   
+    @media (min-width: 810px) {
+        margin: 30px 20px 40px 0;
+    }
+    
   }
 
   .card .row .col .form-group textarea {
@@ -71,7 +79,7 @@ const ContactContainer = styled.section`
     height: 100%;
     background: transparent;
     outline: none;
-    font-size: 24px;
+    font-size: 20px;
     padding: 10px 0 10px 20px;
     border: 5px solid rgba(126, 26, 208, 0.306);
     box-shadow: 10px 10px 0 rgba(126, 26, 208, 0.306);
@@ -82,7 +90,7 @@ const ContactContainer = styled.section`
   .card .row .form-group label {
     line-height: 40px;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 20px;
     margin: 0 0 0 30px;
     display: block;
     pointer-events: none;
