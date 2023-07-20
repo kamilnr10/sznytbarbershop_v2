@@ -2,12 +2,14 @@ import React, { useState, useCallback, useEffect } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import styled from "styled-components";
+import { Header } from "../../atoms/HeaderText/HeaderText";
 
 const SectionContainer = styled.section`
   padding: 0 5%;
   margin: 80px auto 0;
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -123,6 +125,7 @@ const Works = () => {
 
   return (
     <SectionContainer>
+      <Header>Gallery</Header>
       <Gallery photos={data.data.allWorks} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (

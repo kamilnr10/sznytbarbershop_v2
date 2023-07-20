@@ -2,71 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
-
-const StyledButton = styled.button`
-  width: 10%;
-  min-width: 150px;
-  border-radius: 2.7777777778vw;
-  padding: 1.5333333333vw;
-  margin: 4.8333333333vw;
-  background-color: transparent;
-  border: 2px solid white;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  tranisition: all 0.3s;
-
-  @media (min-width: 400px) {
-    margin: 8.8333333333vw;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 1.0333333333vw;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #b700ff;
-    transform: translateY(100%);
-    transition: transform 0.3s;
-    z-index: -1;
-  }
-
-  &:hover {
-    /* background-color: #241ff3; */
-
-    &::after {
-      transform: translateY(0%);
-    }
-  }
-
-  span {
-    /* z-index: 10; */
-  }
-`;
-
-const Button = ({ children }) => {
-  return (
-    <StyledButton>
-      <span>{children}</span>
-    </StyledButton>
-  );
-};
-
-const HeaderText = styled.h1`
-  font-size: 80px;
-  margin: 0 auto;
-  text-align: center;
-`;
-
-const Header = ({ children }) => {
-  return <HeaderText>{children}</HeaderText>;
-};
+import { Button } from "../../atoms/StyledButton/StyledButton";
+import { Header } from "../../atoms/HeaderText/HeaderText";
 
 const SectionContainer = styled.section`
   width: 100%;
@@ -513,9 +450,9 @@ const Contact = () => {
           </InputContainer>
           <div>
             <ButtonContainer>
-              <StyledButton type="submit" value="SEND MESSAGE">
+              <Button type="submit" value="SEND MESSAGE">
                 Send
-              </StyledButton>
+              </Button>
             </ButtonContainer>
           </div>
           {errors.message && (

@@ -8,6 +8,7 @@ import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import { Header } from "../../atoms/HeaderText/HeaderText";
 
 // import "./styles.css";
 
@@ -19,6 +20,7 @@ const TeamContainer = styled.div`
   height: 100vh;
   font-size: 100px;
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 
@@ -91,7 +93,7 @@ const InfoContainer = styled.div`
       justify-content: end;
     }
     a {
-      margin: 0 right;
+      margin: 0 auto;
       text-align: right;
       width: 30px;
       height: 30px;
@@ -160,7 +162,7 @@ const Team = () => {
               <img src={member.image.url} />
               <InfoContainer>
                 <div>
-                  <p>{member.name}</p>
+                  <p style={{ fontWeight: "900" }}>{member.name}</p>
                 </div>
                 <div>
                   <p>{member.job}</p>

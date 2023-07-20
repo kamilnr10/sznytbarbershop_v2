@@ -7,6 +7,7 @@ import {
   useLoadScript,
 } from "@react-google-maps/api";
 import styled from "styled-components";
+import { Header } from "../../atoms/HeaderText/HeaderText";
 
 const StyledAddress = styled.h3`
   color: black;
@@ -21,24 +22,24 @@ const MapContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 80px auto 0;
 
   .map-container {
     height: 50%;
     width: 80%;
 
     @media (min-width: 810px) {
-      height: 75%;
-      width: 75%;
+      height: 65%;
+      width: 65%;
     }
 
     @media (min-width: 1200px) {
-      height: 70%;
+      height: 60%;
       width: 70%;
     }
 
     @media (min-width: 1600px) {
-      height: 60%;
+      height: 50%;
       width: 60%;
     }
   }
@@ -127,6 +128,7 @@ const FindUs = () => {
         <h1>Loading...</h1>
       ) : (
         <>
+          <Header>Find Us</Header>
           <InfoContainer>
             <table class="blueTable">
               <thead>
