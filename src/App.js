@@ -11,6 +11,8 @@ import Team from "./components/pages/Team/Team";
 import Works from "./components/pages/Gallery/Gallery";
 import Contact from "./components/pages/Contact/Contact";
 import FindUs from "./components/pages/FindUs/FindUs";
+import Galleries from "./components/pages/Galleries/Galleries";
+import Art from "./components/pages/Art/Art";
 
 const Home = () => {
   return (
@@ -30,9 +32,10 @@ function App() {
 
       <MainTemplate>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/gallery" element={<Works />} />
+          <Route path="/gallery" element={<Galleries />} />
+          <Route path="/gallery/:id" element={<Art />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/findus" element={<FindUs />} />
         </Routes>
