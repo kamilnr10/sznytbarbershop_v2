@@ -10,6 +10,7 @@ import VideoSection from "./components/organisms/VideoSection/VideoSection";
 import Team from "./components/pages/Team/Team";
 import Works from "./components/pages/Gallery/Gallery";
 import Contact from "./components/pages/Contact/Contact";
+import FindUs from "./components/pages/FindUs/FindUs";
 
 const Home = () => {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Works />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/findus" element={<FindUs />} />
         </Routes>
       </MainTemplate>
     </div>

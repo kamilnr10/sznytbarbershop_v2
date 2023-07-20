@@ -44,7 +44,7 @@ const Navigation = () => {
   return (
     <NavigationWrapper visible={visible}>
       <ImgWrapper>
-        <Link to="/">
+        <Link to="/" onClick={() => setNavOpen(false)}>
           <Image src={logo} alt="" />
         </Link>
       </ImgWrapper>
@@ -77,9 +77,9 @@ const Navigation = () => {
             </li>
             <li>
               <span>04</span>
-              <a href="#findus" onClick={() => setNavOpen(false)}>
+              <Link to="/findus" onClick={() => setNavOpen(false)}>
                 Find Us
-              </a>
+              </Link>
             </li>
           </ul>
           <IconsContainer>
