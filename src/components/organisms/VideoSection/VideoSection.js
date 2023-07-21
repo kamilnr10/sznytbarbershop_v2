@@ -128,7 +128,7 @@ const VideoSection = ({ video }) => {
           playsInline
           // oncontextmenu="return false;"
           // preload="auto"
-          // poster=""
+          poster=""
           width={width}
           height={height}
         ></video>
