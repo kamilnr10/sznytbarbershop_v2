@@ -17,10 +17,14 @@ const ReviewsContainer = styled.div`
 
 const ReviewsSlider = styled.div`
   height: 100%;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+
+  @media (min-width: 810px) {
+    display: block;
+  }
 
   .slider {
     position: relative;
