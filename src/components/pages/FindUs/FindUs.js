@@ -24,6 +24,10 @@ const MapContainer = styled.div`
   align-items: center;
   margin: 80px auto 0;
 
+  @media (min-width: 365px) {
+    height: 80vh;
+  }
+
   .map-container {
     height: 50%;
     width: 80%;
@@ -145,14 +149,14 @@ const FindUs = () => {
                   <td>
                     <p>Pon - Pt</p>
                   </td>
-                  <td>9:00 - 13:00</td>
-                  <td>13:30 - 18:00</td>
+                  <td>9:00-13:00</td>
+                  <td>13:30-18:00</td>
                 </tr>
                 <tr>
                   <td>
                     <p>Sobota</p>
                   </td>
-                  <td>9:00 - 15:00</td>
+                  <td>9:00-15:00</td>
                   <td></td>
                 </tr>
               </tbody>

@@ -65,14 +65,14 @@ const OurStory = () => {
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          query:
-            "{ allOurstories { id description } _allOurstoriesMeta { count } }",
+          query: "{ ourstory { id description } }",
         }),
       });
 
       const myData = await response.json();
 
-      setData(myData.data.allOurstories);
+      setData(myData);
+      // console.log(myData.data);
       setLoading(false);
     } catch (error) {
       console.error("Błąd pobierania danych:", error);
@@ -111,7 +111,7 @@ const OurStory = () => {
   return (
     <TextConainer>
       <h1>OUR STORY</h1>
-      <p>{data[0].description}</p>
+      <p>{data.data.ourstory.description}</p>
     </TextConainer>
   );
 };

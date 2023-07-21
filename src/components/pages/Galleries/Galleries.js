@@ -5,21 +5,31 @@ import { useParams } from "react-router-dom";
 
 const GalleriesSection = styled.section`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    text-align: center;
+  }
 `;
 
 const ImgContainer = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  margin: 10px 0;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
   }
 `;
 
@@ -64,7 +74,7 @@ const Galleries = () => {
 
   return (
     <GalleriesSection>
-      <h2>Gallery</h2>
+      <h1>Gallery</h1>
       {data.data.allGalleries.map((item) => (
         <div key={item.id}>
           <h2>{item.name}</h2>

@@ -48,7 +48,7 @@ const Wrapper = styled.div`
     grid-template-areas:
       "TickerSection OurStory Reviews"
       "TickerSection VideoSection VideoSection";
-    overflow: hidden;
+    overflow-x: hidden;
   }
 `;
 

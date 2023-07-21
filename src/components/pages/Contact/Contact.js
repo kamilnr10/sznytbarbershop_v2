@@ -457,7 +457,7 @@ const Contact = () => {
           </div>
           {errors.message && (
             <ErrorContainer style={{ color: "red" }}>
-              Please fill out Message field.
+              Uzupełnij wszystkie pola
             </ErrorContainer>
           )}
         </form>
