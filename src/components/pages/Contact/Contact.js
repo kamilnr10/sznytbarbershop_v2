@@ -417,7 +417,7 @@ const Contact = () => {
   };
   return (
     <SectionContainer>
-      <Header>CONTACT</Header>
+      <Header>KONTAKT</Header>
       <FormWrapper>
         <form className="contact-form" onSubmit={handleSubmit(sendEmail)}>
           <InputContainer>
