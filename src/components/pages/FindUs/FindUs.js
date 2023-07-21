@@ -132,7 +132,7 @@ const FindUs = () => {
         <h1>Loading...</h1>
       ) : (
         <>
-          <Header>Find Us</Header>
+          <Header>REZERWACJA</Header>
           <InfoContainer>
             <table class="blueTable">
               <thead>

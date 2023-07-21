@@ -23,6 +23,10 @@ const Wrapper = styled.div`
     grid-template-rows: repeat(3, auto, auto, auto);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    grid-template-areas:
+      "TickerSection OurStory "
+      "TickerSection Reviews "
+      "TickerSection VideoSection";
 
     .div1 {
       grid-area: 1 / 1 / 4 / 2;
@@ -38,7 +42,7 @@ const Wrapper = styled.div`
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1510px) {
     width: 100vw;
     height: 100vh;
     display: grid;

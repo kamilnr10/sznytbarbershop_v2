@@ -60,25 +60,25 @@ const Navigation = () => {
             <li>
               <span>01</span>
               <Link to="/team" onClick={() => setNavOpen(false)}>
-                Team
+                Zespół
               </Link>
             </li>
             <li>
               <span>02</span>
               <Link to="/gallery" onClick={() => setNavOpen(false)}>
-                Gallery
+                Galeria
               </Link>
             </li>
             <li>
               <span>03</span>
               <Link to="/contact" onClick={() => setNavOpen(false)}>
-                Contact
+                Kontakt
               </Link>
             </li>
             <li>
               <span>04</span>
               <Link to="/findus" onClick={() => setNavOpen(false)}>
-                Find Us
+                Rezerwacja
               </Link>
             </li>
           </ul>

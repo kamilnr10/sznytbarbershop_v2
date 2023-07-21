@@ -7,17 +7,26 @@ import StarRatings from "react-star-ratings";
 const ReviewsContainer = styled.div`
   padding: 0 5%;
 
+  h1 {
+    font-size: 40px;
+  }
   @media (min-width: 1200px) {
     margin: 80px 0 0 0;
-    padding: 0 30px;
   }
 `;
 
 const ReviewsSlider = styled.div`
+  height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+
   .slider {
     position: relative;
     width: 90%;
     height: 600px;
+
     margin: 0 auto;
     overflow: hidden;
 
@@ -109,26 +118,26 @@ const ReviewsSlider = styled.div`
 `;
 
 const ReviewWrapper = styled.div`
-  padding: 20px;
+  /* padding: 5px; */
   display: flex;
   flex-direction: column;
 
   p:nth-of-type(1) {
-    /* font-size: 15px; */
-    font-weight: 900;
+    font-size: 17px;
+    font-weight: bold;
     padding: 0 0 20px 0;
 
-    @media (min-width: 810px) {
+    /* @media (min-width: 810px) {
       font-size: 10px;
-    }
+    } */
   }
 
   p:nth-of-type(2) {
-    padding: 0 0 20px 0;
+    padding: 0 0 10px 0;
 
-    @media (min-width: 1500px) {
+    /* @media (min-width: 1500px) {
       font-size: 11px;
-    }
+    } */
   }
 `;
 
@@ -195,7 +204,7 @@ const Reviews = () => {
 
   return (
     <ReviewsContainer>
-      <h1>Reviews</h1>
+      <h1>OPINIE</h1>
       <ReviewsSlider>
         <Slider
           direction="vertical"

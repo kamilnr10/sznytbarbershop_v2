@@ -12,7 +12,7 @@ const GalleriesSection = styled.section`
   align-items: center;
 
   h1 {
-    font-size: 80px;
+    /* font-size: 80px; */
   }
 
   h2 {
@@ -74,7 +74,7 @@ const Galleries = () => {
 
   return (
     <GalleriesSection>
-      <h1>Gallery</h1>
+      <h1>GALERIA</h1>
       {data.data.allGalleries.map((item) => (
         <div key={item.id}>
           <h2>{item.name}</h2>

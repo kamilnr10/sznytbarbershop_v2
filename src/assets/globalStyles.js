@@ -49,10 +49,11 @@ body {
 }
 
   h1 {
-    font-family: 'Six Caps', sans-serif;
+    font-family: 'Alfa Slab One', sans-serif;
     color: #fff;
     margin: 20px 0;
-    font-size: 80px;
+    font-size: 40px;
+    letter-spacing: 2px;
 
     @media (min-width: 1200px) {
       margin: 20px 0;
@@ -72,9 +73,10 @@ body {
   }
 
   p {
-    font-family: "Lexend Zetta", sans-serif;
-    font-weigth: 900;
-    font-size: 12px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    ${"" /* letter-spacing: 1px; */}
+    line-height: 1.3;
 
     @media (min-width: 1200px) {
      

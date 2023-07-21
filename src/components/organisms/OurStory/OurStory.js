@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import axios from "axios";
 
 export const TextConainer = styled.div`
   -webkit-box-shadow: 0px -38px 56px 36px rgba(0, 0, 0, 1);
@@ -23,15 +22,16 @@ export const TextConainer = styled.div`
   }
   h1 {
     /* margin: 20px 0; */
-    /* font-size: 80px; */
+    font-size: 40px;
   }
   p {
     padding: 0 0 20px 0;
-    font-family: "Lexend Zetta", sans-serif;
-    font-size: 12px;
-    line-height: 1.5;
+    font-family: "Ubuntu Mono", monospace;
+    /* font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.4; */
 
-    @media (min-width: 810px) {
+    /* @media (min-width: 810px) {
       font-size: 10px;
     }
 
@@ -45,7 +45,7 @@ export const TextConainer = styled.div`
       padding: 0 0 0 0;
       font-size: 11px;
       line-height: 1.4;
-    }
+    } */
   }
 `;
 
@@ -110,7 +110,7 @@ const OurStory = () => {
 
   return (
     <TextConainer>
-      <h1>OUR STORY</h1>
+      <h1>O NAS</h1>
       <p>{data.data.ourstory.description}</p>
     </TextConainer>
   );
