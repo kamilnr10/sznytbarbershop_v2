@@ -23,7 +23,7 @@ const GalleriesSection = styled.section`
 const ImgContainer = styled.div`
   width: 300px;
   height: 300px;
-  margin: 10px 0;
+  margin: 5px 0 25px;
 
   img {
     width: 100%;
@@ -49,7 +49,7 @@ const Galleries = () => {
         },
         body: JSON.stringify({
           query:
-            "{ allGalleries { id name preview { id url } gallery { id url } width height } }",
+            "{ allGalleries { id name preview { id url } gallery { id url } } }",
         }),
       });
 

@@ -64,7 +64,7 @@ const OurWorks = () => {
           Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
         },
         body: JSON.stringify({
-          query: `{ allGalleries(filter: {id: {eq: ${id}}}) { id name preview { id url } gallery { id url } width height } }`,
+          query: `{ allGalleries(filter: {id: {eq: ${id}}}) { id name preview { id url } gallery { id url } } }`,
         }),
       });
 
