@@ -54,6 +54,7 @@ body {
     margin: 20px 0;
     font-size: 40px;
     letter-spacing: 2px;
+    text-transform: uppercase;
 
     @media (min-width: 1200px) {
       margin: 20px 0;

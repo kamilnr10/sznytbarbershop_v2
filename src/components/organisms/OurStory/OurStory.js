@@ -49,36 +49,36 @@ export const TextConainer = styled.div`
   }
 `;
 
-const token = process.env.REACT_APP_TOKEN;
+// const token = process.env.REACT_APP_TOKEN;
 
-const OurStory = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+const OurStory = ({ ourstory, loading }) => {
+  // const [data, setData] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch("https://graphql.datocms.com/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          query: "{ ourstory { id description } }",
-        }),
-      });
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await fetch("https://graphql.datocms.com/", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Accept: "application/json",
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //       body: JSON.stringify({
+  //         query: "{ourstory { id description video { id url } } }",
+  //       }),
+  //     });
 
-      const myData = await response.json();
+  //     const myData = await response.json();
 
-      setData(myData);
-      // console.log(myData.data);
-      setLoading(false);
-    } catch (error) {
-      console.error("Błąd pobierania danych:", error);
-      setLoading(false);
-    }
-  };
+  //     setData(myData);
+  //     // console.log(myData.data);
+  //     setLoading(false);
+  //   } catch (error) {
+  //     console.error("Błąd pobierania danych:", error);
+  //     setLoading(false);
+  //   }
+  // };
 
   //   const fetchReviews = async () => {
   //     try {
@@ -99,10 +99,10 @@ const OurStory = () => {
   //     }
   //   };
 
-  useEffect(() => {
-    fetchData();
-    // fetchReviews();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  //   // fetchReviews();
+  // }, []);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -111,7 +111,7 @@ const OurStory = () => {
   return (
     <TextConainer>
       <h1>O NAS</h1>
-      <p>{data.data.ourstory.description}</p>
+      <p>{ourstory}</p>
     </TextConainer>
   );
 };

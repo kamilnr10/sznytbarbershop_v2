@@ -45,18 +45,20 @@ export const Image = styled.img`
 
 export const MenuToggle = styled.div`
   cursor: pointer;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   background-color: ${({ navopen }) => (navopen ? "#2a2a2f" : "rgba(0,0,0,0)")};
 `;
 
 export const HamBox = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   border-radius: 50%;
   transition: 0.3 ease;
+
+  /* background-color: white; */
   background-color: ${({ navopen }) => navopen && "#2a2a2f"};
   /* padding: 1em; */
 

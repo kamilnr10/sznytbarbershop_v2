@@ -18,6 +18,51 @@ import {
   NavMenu,
 } from "./Navigation.styles";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
+const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+
+  svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    path {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+    }
+  }
+`;
+
+const Path = (props) => (
+  <motion.path
+    fill="transparent"
+    strokeWidth="3"
+    stroke="hsl(0, 0%, 18%)"
+    strokeLinecap="round"
+    {...props}
+  />
+);
 
 const IconsContainer = styled.div`
   margin: 0 0 80px;
@@ -50,6 +95,32 @@ const Navigation = () => {
       </ImgWrapper>
       <MenuToggle onClick={() => setNavOpen(!navOpen)}>
         <HamBox navOpen={navOpen}>
+          {/* <Button>
+            <svg width="40" height="40" viewBox="0 0 23 23">
+              <Path
+                d="M 4 5.423 L 19 5.423"
+                variants={{
+                  closed: { d: "M 2 2.5 L 20 2.5" },
+                  open: { d: "M 3 16.5 L 17 2.5" },
+                }}
+              />
+              <Path
+                d="M 4 11.423 L 19 11.423"
+                variants={{
+                  closed: { opacity: 1 },
+                  open: { opacity: 0 },
+                }}
+                transition={{ duration: 0.1 }}
+              />
+              <Path
+                d="M 4 17.423 L 19 17.423"
+                variants={{
+                  closed: { d: "M 2 16.346 L 20 16.346" },
+                  open: { d: "M 3 2.5 L 17 16.346" },
+                }}
+              />
+            </svg>
+          </Button> */}
           <LineTop navOpen={navOpen}></LineTop>
           <LineBottom navOpen={navOpen}></LineBottom>
         </HamBox>
