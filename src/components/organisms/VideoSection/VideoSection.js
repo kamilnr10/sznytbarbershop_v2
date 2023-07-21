@@ -15,6 +15,7 @@ const VideoContainer = styled.div`
   width: 100%;
   height: ${({ height }) => `${height}px`};
   position: relative;
+  /* width: ${({ width }) => `${width}px`}; */
 
   /* img {
     width: 100%;
@@ -35,6 +36,7 @@ const VideoContainer = styled.div`
     object-fit: cover;
 
     @media (min-width: 1500px) {
+      /* height: 250px; */
       height: ${({ height }) => `${height + 80}px`};
       /* transform: translateY(-20px);
       height: ${({ height }) => `${height + 80}px`}; */
@@ -50,7 +52,7 @@ const VideoContainer = styled.div`
     transform: translateY(-20px);
     inset: 0;
     height: ${({ height }) => `${height}px`};
-    width: 100%;
+    /* width: 100%; */
     /* line-height: 689px; */
     mix-blend-mode: multiply;
     background-color: #000;
@@ -76,9 +78,9 @@ const VideoContainer = styled.div`
     }
 
     @media (min-width: 1500px) {
-      font-size: ${({ height }) => `${height + 80}px`};
-      transform: translateY(-20px);
-      height: ${({ height }) => `${height + 80}px`};
+      font-size: ${({ height }) => `${height + 40}px`};
+      transform: translateY(-60px);
+      height: ${({ height }) => `${height + 60}px`};
     }
     /* transform: translateZ(0); */
   }
@@ -95,14 +97,14 @@ const VideoSection = ({ video }) => {
   useLayoutEffect(() => {
     setWidth(ref.current.clientWidth);
     setHeight(ref.current.clientHeight);
-  }, [numbers]);
+  }, []);
 
   useEffect(() => {
     function handleWindowResize() {
       setWidth(ref.current.clientWidth);
       setHeight(ref.current.clientHeight);
     }
-
+    console.log(ref.current.clientWidth);
     window.addEventListener("resize", handleWindowResize);
 
     return () => {
@@ -111,8 +113,8 @@ const VideoSection = ({ video }) => {
   }, []);
 
   return (
-    <VideoSectionContainer>
-      <VideoContainer ref={ref} width={width} height={height}>
+    <VideoSectionContainer ref={ref} width={width} height={height}>
+      <VideoContainer width={width} height={height}>
         {/* <img src={team} alt="team" /> */}
         <video
           type="video/mp4"
