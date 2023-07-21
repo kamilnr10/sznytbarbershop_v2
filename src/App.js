@@ -8,22 +8,11 @@ import OurStory from "./components/organisms/OurStory/OurStory";
 import Reviews from "./components/organisms/Reviews/Reviews";
 import VideoSection from "./components/organisms/VideoSection/VideoSection";
 import Team from "./components/pages/Team/Team";
-import Works from "./components/pages/Gallery/Gallery";
 import Contact from "./components/pages/Contact/Contact";
 import FindUs from "./components/pages/FindUs/FindUs";
 import Galleries from "./components/pages/Galleries/Galleries";
-import Art from "./components/pages/Art/Art";
-
-const Home = () => {
-  return (
-    <>
-      <TickerSection />
-      <OurStory />
-      <Reviews />
-      <VideoSection />
-    </>
-  );
-};
+import OurWorks from "./components/pages/OurWorks/OurWorks";
+import Home from "./components/pages/Home/Home";
 
 function App() {
   return (
@@ -35,7 +24,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Galleries />} />
-          <Route path="/gallery/:id" element={<Art />} />
+          <Route path="/gallery/:id" element={<OurWorks />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/findus" element={<FindUs />} />
         </Routes>

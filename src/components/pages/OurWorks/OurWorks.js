@@ -39,7 +39,7 @@ const ImageContainer = styled.div`
 `;
 
 //{ allGalleries(filter: {id: {eq: ""}}) { id name preview { id url } gallery { id url } width height } }
-const Art = () => {
+const OurWorks = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
@@ -120,4 +120,4 @@ const Art = () => {
   );
 };
 
-export default Art;
+export default OurWorks;
