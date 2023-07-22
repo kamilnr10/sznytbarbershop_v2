@@ -36,6 +36,10 @@ const VideoContainer = styled.div`
 
     object-fit: cover;
 
+    will-change: transform;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+
     @media (min-width: 1500px) {
       /* height: 250px; */
       height: ${({ height }) => `${height + 80}px`};
@@ -119,7 +123,7 @@ const VideoSection = ({ video }) => {
         {/* <img src={team} alt="team" /> */}
         <video
           type="video/mp4"
-          src={sznytvideo}
+          src={video}
           controls
           // autobuffer
           autoPlay
