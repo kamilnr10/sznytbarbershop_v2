@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 import styled from "styled-components";
+import sznytvideo from "../../../assets/sznytvideo.mp4";
 
 const VideoSectionContainer = styled.div`
   width: 100%;
@@ -118,17 +119,17 @@ const VideoSection = ({ video }) => {
         {/* <img src={team} alt="team" /> */}
         <video
           type="video/mp4"
-          src={video}
+          src={sznytvideo}
           controls
-          autobuffer
-          // autoPlay
+          // autobuffer
+          autoPlay
           loop
           muted
           // defaultmuted
           playsInline
           // oncontextmenu="return false;"
-          // preload="auto"
-          poster=""
+          preload="auto"
+          // poster=""
           width={width}
           height={height}
         ></video>
