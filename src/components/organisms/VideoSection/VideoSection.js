@@ -46,7 +46,7 @@ const VideoContainer = styled.div`
   }
 
   h1 {
-    font-size: ${({ height }) => `${height}px`};
+    font-size: ${({ height }) => `${height - 120}px`};
     font-family: "Six Caps", sans-serif;
     position: absolute;
     transform: translateY(-20px);
@@ -66,15 +66,15 @@ const VideoContainer = styled.div`
     align-items: center;
 
     @media (max-width: 340px) {
-      font-size: ${({ height }) => `${height - 40}px`};
+      font-size: ${({ height }) => `${height - 130}px`};
     }
 
     @media (max-width: 320px) {
-      font-size: ${({ height }) => `${height - 60}px`};
+      font-size: ${({ height }) => `${height - 150}px`};
     }
 
     @media (max-width: 300px) {
-      font-size: ${({ height }) => `${height - 80}px`};
+      font-size: ${({ height }) => `${height - 180}px`};
     }
 
     @media (min-width: 1500px) {
@@ -119,9 +119,9 @@ const VideoSection = ({ video }) => {
         <video
           type="video/mp4"
           src={video}
-          // controls
-          // autobuffer
-          autoPlay
+          controls
+          autobuffer
+          // autoPlay
           loop
           muted
           // defaultmuted
