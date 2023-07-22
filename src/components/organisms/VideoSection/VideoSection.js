@@ -123,7 +123,7 @@ const VideoSection = ({ video }) => {
         {/* <img src={team} alt="team" /> */}
         <video
           type="video/mp4"
-          src={video}
+          src={`${video}#t=0.001`}
           controls
           // autobuffer
           autoPlay
