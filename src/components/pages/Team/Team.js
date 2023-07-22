@@ -15,17 +15,27 @@ import { Header } from "../../atoms/HeaderText/HeaderText";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
-const TeamContainer = styled.div`
+const TeamSection = styled.section`
   width: 100vw;
-  height: 100vh;
-  font-size: 100px;
+  height: 100%;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 80px 0 0 0;
+`;
+
+const TeamContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  /* font-size: 100px; */
+  /* display: flex;
+
+  justify-content: center;
+  align-items: center; */
 
   @media screen and (min-width: 810px) {
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   div {
@@ -139,45 +149,53 @@ const Team = () => {
   }
 
   return (
-    <TeamContainer>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        {data.map((member) => (
-          <SwiperSlide key={member.id}>
-            <MemberContainer>
-              <img src={member.image.url} />
-              <InfoContainer>
-                <div>
-                  <p style={{ fontWeight: "900" }}>{member.name}</p>
-                </div>
-                <div>
-                  <p>{member.job}</p>
-                </div>
-                <div>
-                  <a href={member.instagram} target="_blank">
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                </div>
-              </InfoContainer>
-            </MemberContainer>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </TeamContainer>
+    <TeamSection>
+      <h1>Zespół</h1>
+      <TeamContainer>
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination]}
+          className="mySwiper"
+        >
+          {data.map((member) => (
+            <SwiperSlide key={member.id}>
+              <MemberContainer>
+                <img src={member.image.url} />
+                <InfoContainer>
+                  <div>
+                    <p style={{ fontWeight: "900", fontSize: "20px" }}>
+                      {member.name}
+                    </p>
+                  </div>
+                  <div>
+                    <p>{member.job}</p>
+                  </div>
+                  <div>
+                    <a href={member.instagram} target="_blank">
+                      <FontAwesomeIcon
+                        style={{ fontSize: "28px" }}
+                        icon={faInstagram}
+                      />
+                    </a>
+                  </div>
+                </InfoContainer>
+              </MemberContainer>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </TeamContainer>
+    </TeamSection>
   );
 };
 

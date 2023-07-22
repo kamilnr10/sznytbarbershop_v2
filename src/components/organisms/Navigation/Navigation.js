@@ -19,6 +19,38 @@ import {
 } from "./Navigation.styles";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import booksy from "../../../assets/booksy-logo.png";
+import { ReactComponent as ReactLogo } from "../../../assets/booksy.svg";
+
+const MenuToggleWrapper = styled.div`
+  /* width: 44px; */
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    margin: 0 5px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+    &:focus {
+      background-color: #363636;
+    }
+    svg {
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        border-radius: 10px;
+        background-color: #363636;
+      }
+      path {
+        /* fill: #b700ff; */
+        fill: #fdfdfd;
+      }
+    }
+  }
+`;
 
 const Button = styled.button`
   display: flex;
@@ -93,9 +125,18 @@ const Navigation = () => {
           <Image src={logo} alt="" />
         </Link>
       </ImgWrapper>
-      <MenuToggle onClick={() => setNavOpen(!navOpen)}>
-        <HamBox navOpen={navOpen}>
-          {/* <Button>
+      <MenuToggleWrapper>
+        <div>
+          <a
+            href="https://booksy.com/pl-pl/138044_sznyt-barbershop_barber-shop_3_warszawa"
+            target="_blank"
+          >
+            <ReactLogo style={{ width: "80px" }} />
+          </a>
+        </div>
+        <MenuToggle onClick={() => setNavOpen(!navOpen)}>
+          <HamBox navOpen={navOpen}>
+            {/* <Button>
             <svg width="40" height="40" viewBox="0 0 23 23">
               <Path
                 d="M 4 5.423 L 19 5.423"
@@ -121,10 +162,11 @@ const Navigation = () => {
               />
             </svg>
           </Button> */}
-          <LineTop navOpen={navOpen}></LineTop>
-          <LineBottom navOpen={navOpen}></LineBottom>
-        </HamBox>
-      </MenuToggle>
+            <LineTop navOpen={navOpen}></LineTop>
+            <LineBottom navOpen={navOpen}></LineBottom>
+          </HamBox>
+        </MenuToggle>
+      </MenuToggleWrapper>
       <NavOverlay navOpen={navOpen}>
         <NavMenu>
           <ul>
@@ -149,7 +191,7 @@ const Navigation = () => {
             <li>
               <span>04</span>
               <Link to="/findus" onClick={() => setNavOpen(false)}>
-                Rezerwacja
+                Gdzie jesteśmy
               </Link>
             </li>
           </ul>

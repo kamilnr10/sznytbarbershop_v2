@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 const GalleriesSection = styled.section`
-  width: 100vw;
+  width: 98vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 80px 0 0;
+  overflow-x: hidden;
 
   h1 {
     /* font-size: 80px; */

@@ -57,7 +57,7 @@ body {
     text-transform: uppercase;
 
     @media (min-width: 1200px) {
-      margin: 20px 0;
+      margin: 80px 0 0;
       font-size: 60px;
     }
     
