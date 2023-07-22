@@ -4,8 +4,9 @@ import sznytvideo from "../../../assets/sznytvideo.mp4";
 
 const VideoSectionContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: ${({ height }) => `${height}px`};
   overflow-y: hidden;
+  min-height: 300px;
 
   @media (min-width: 1200px) {
     grid-area: VideoSection;
@@ -90,6 +91,11 @@ const VideoContainer = styled.div`
     /* transform: translateZ(0); */
   }
 `;
+const VideoText = styled.div`
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+`;
 
 const VideoSection = ({ video }) => {
   const ref = useRef(null);
@@ -105,11 +111,12 @@ const VideoSection = ({ video }) => {
   }, []);
 
   useEffect(() => {
+    console.log(ref.current.clientHeight);
     function handleWindowResize() {
       setWidth(ref.current.clientWidth);
       setHeight(ref.current.clientHeight);
     }
-    console.log(ref.current.clientWidth);
+    // console.log(ref.current.clientWidth);
     window.addEventListener("resize", handleWindowResize);
 
     return () => {
@@ -118,7 +125,7 @@ const VideoSection = ({ video }) => {
   }, []);
 
   return (
-    <VideoSectionContainer ref={ref} width={width} height={height}>
+    <VideoSectionContainer width={width} height={height}>
       <VideoContainer width={width} height={height}>
         {/* <img src={team} alt="team" /> */}
         <video
@@ -137,15 +144,17 @@ const VideoSection = ({ video }) => {
           width={width}
           height={height}
         ></video>
-        {/* <h1
-          width={width}
-          height={height}
-          // style={{
-          //   fontSize: `${height}px`,
-          // }}
-        >
-          SZNYT
-        </h1> */}
+        <VideoText ref={ref}>
+          <h1
+            width={width}
+            height={height}
+            // style={{
+            //   fontSize: `${height}px`,
+            // }}
+          >
+            SZNYT
+          </h1>
+        </VideoText>
       </VideoContainer>
     </VideoSectionContainer>
   );
