@@ -152,6 +152,7 @@ const VideoSection = ({ video }) => {
           // poster=""
           width={width}
           height={height}
+          onClick={(e) => e.target.play()}
         ></video>
         <VideoText ref={ref}>
           <h1
