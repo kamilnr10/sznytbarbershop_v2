@@ -176,7 +176,8 @@ const ButtonContainer = styled.div`
 `;
 
 const Cut = styled.div`
-  background-color: #050505;
+  /* background-color: #050505; */
+  background-color: #010102;
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -227,7 +228,7 @@ const Contact = () => {
             {/* <Cut /> */}
             <Input name="name" {...register("name")} placeholder=" " />
             <Cut />
-            <label for="name">Name</label>
+            <label for="name">Imię</label>
           </InputContainer>
           <InputContainer>
             {/* <Cut /> */}
@@ -249,12 +250,12 @@ const Contact = () => {
               {...register("message", { required: true })}
             ></textarea>
             <Cut />
-            <label for="message">Message</label>
+            <label for="message">Wiadomość</label>
           </InputContainer>
           <div>
             <ButtonContainer>
               <Button type="submit" value="SEND MESSAGE">
-                Send
+                Wyślij
               </Button>
             </ButtonContainer>
           </div>
