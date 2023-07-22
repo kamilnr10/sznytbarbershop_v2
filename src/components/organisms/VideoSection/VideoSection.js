@@ -33,7 +33,7 @@ const VideoContainer = styled.div`
     left: 0; */
     width: 100%;
     height: 100%;
-
+    position: absolute;
     object-fit: cover;
 
     will-change: transform;
@@ -51,7 +51,7 @@ const VideoContainer = styled.div`
   }
 
   h1 {
-    font-size: ${({ height }) => `${height - 120}px`};
+    font-size: ${({ height }) => `${height - 140}px`};
     font-family: "Six Caps", sans-serif;
     position: absolute;
     transform: translateY(-20px);
