@@ -108,11 +108,16 @@ const VideoText = styled.div`
 
 const VideoSection = ({ video }) => {
   const ref = useRef(null);
+  const videoRef = useRef();
 
   const [numbers, setNumbers] = useState([]);
 
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+
+  const handleVideoPlay = () => {
+    videoRef.current.play();
+  };
 
   useLayoutEffect(() => {
     setWidth(ref.current.clientWidth);
@@ -135,9 +140,10 @@ const VideoSection = ({ video }) => {
 
   return (
     <VideoSectionContainer width={width} height={height}>
-      <VideoContainer width={width} height={height}>
+      <VideoContainer width={width} height={height} onClick={handleVideoPlay}>
         {/* <img src={team} alt="team" /> */}
         <video
+          ref={videoRef}
           type="video/mp4"
           src={`${video}#t=0.001`}
           controls
