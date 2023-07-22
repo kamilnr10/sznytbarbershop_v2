@@ -60,10 +60,10 @@ const VideoContainer = styled.div`
   }
 
   h1 {
-    font-size: ${({ height }) => `${height - 140}px`};
+    font-size: ${({ height }) => `${height - 110}px`};
     font-family: "Six Caps", sans-serif;
     position: absolute;
-    transform: translateY(-20px);
+    transform: translateY(0px);
     inset: 0;
     height: ${({ height }) => `${height}px`};
     /* width: 100%; */
@@ -92,9 +92,9 @@ const VideoContainer = styled.div`
     }
 
     @media (min-width: 1200px) {
-      font-size: ${({ height }) => `${height + 40}px`};
-      transform: translateY(-65px);
-      height: ${({ height }) => `${height + 60}px`};
+      font-size: ${({ height }) => `${height + 30}px`};
+      transform: translateY(-45px);
+      height: ${({ height }) => `${height + 80}px`};
     }
 
     @media (min-width: 1500px) {
