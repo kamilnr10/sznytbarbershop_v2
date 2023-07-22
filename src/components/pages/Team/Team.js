@@ -9,10 +9,6 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { Header } from "../../atoms/HeaderText/HeaderText";
-
-// import "./styles.css";
-
-// import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 const TeamSection = styled.section`
@@ -23,6 +19,10 @@ const TeamSection = styled.section`
   justify-content: center;
   align-items: center;
   margin: 80px 0 0 0;
+
+  @media (min-width: 1500px) {
+    position: absolute;
+  }
 `;
 
 const TeamContainer = styled.div`
@@ -34,8 +34,9 @@ const TeamContainer = styled.div`
   justify-content: center;
   align-items: center; */
 
-  @media screen and (min-width: 810px) {
+  @media (min-width: 1200px) {
     /* height: 100vh; */
+    margin: 80px 0 0;
   }
 
   div {
@@ -126,7 +127,7 @@ const Team = () => {
         },
         body: JSON.stringify({
           query:
-            "{ allTeams { id name job description instagram image {id url} } }",
+            "{ allTeams { id name job description instagram image {id url} booksy } }",
         }),
       });
 
@@ -154,7 +155,7 @@ const Team = () => {
       <TeamContainer>
         <Swiper
           effect={"coverflow"}
-          grabCursor={true}
+          // grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
           coverflowEffect={{
@@ -171,7 +172,9 @@ const Team = () => {
           {data.map((member) => (
             <SwiperSlide key={member.id}>
               <MemberContainer>
-                <img src={member.image.url} />
+                <a href={member.booksy} target="_blank">
+                  <img src={member.image.url} />
+                </a>
                 <InfoContainer>
                   <div>
                     <p style={{ fontWeight: "900", fontSize: "20px" }}>

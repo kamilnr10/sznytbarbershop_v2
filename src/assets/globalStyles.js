@@ -51,7 +51,7 @@ body {
   h1 {
     font-family: 'Alfa Slab One', sans-serif;
     color: #fff;
-    margin: 20px 0;
+    ${"" /* margin: 80px 0; */}
     font-size: 40px;
     letter-spacing: 2px;
     text-transform: uppercase;

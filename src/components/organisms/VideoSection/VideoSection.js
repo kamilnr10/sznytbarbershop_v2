@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 import styled from "styled-components";
-import sznytvideo from "../../../assets/sznytvideo.mp4";
 
 const VideoSectionContainer = styled.div`
   width: 100%;
