@@ -22,13 +22,12 @@ function App() {
 
       <MainTemplate>
         <Routes>
-          <Route path="/" exact element={<Main />} />
-          {/* <Route path="/" exact element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Galleries />} />
           <Route path="/gallery/:id" element={<OurWorks />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/findus" element={<FindUs />} /> */}
+          <Route path="/findus" element={<FindUs />} />
         </Routes>
       </MainTemplate>
     </div>

@@ -137,7 +137,7 @@ const VideoSection = ({ video }) => {
           width={width}
           height={height}
         ></video>
-        <h1
+        {/* <h1
           width={width}
           height={height}
           // style={{
@@ -145,7 +145,7 @@ const VideoSection = ({ video }) => {
           // }}
         >
           SZNYT
-        </h1>
+        </h1> */}
       </VideoContainer>
     </VideoSectionContainer>
   );
