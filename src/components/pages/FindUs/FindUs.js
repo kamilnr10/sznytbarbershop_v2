@@ -132,7 +132,7 @@ const FindUs = () => {
         <h1>Loading...</h1>
       ) : (
         <>
-          <Header>REZERWACJA</Header>
+          <Header>LOKALIZACJA</Header>
           <InfoContainer>
             <table class="blueTable">
               <thead>
