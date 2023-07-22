@@ -191,7 +191,7 @@ const Navigation = () => {
             <li>
               <span>04</span>
               <Link to="/findus" onClick={() => setNavOpen(false)}>
-                Gdzie jesteśmy
+                Lokalizacja
               </Link>
             </li>
           </ul>
