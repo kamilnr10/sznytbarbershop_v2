@@ -29,14 +29,14 @@ const ReviewsSlider = styled.div`
   .slider {
     position: relative;
     width: 90%;
-    height: 600px;
+    /* min-height: 400px; */
 
     margin: 0 auto;
     overflow: hidden;
 
-    @media (min-width: 810px) {
+    /* @media (min-width: 810px) {
       height: 300px;
-    }
+    } */
   }
 
   .slider a.previousButton,

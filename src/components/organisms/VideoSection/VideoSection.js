@@ -92,9 +92,15 @@ const VideoContainer = styled.div`
       font-size: ${({ height }) => `${height - 180}px`};
     }
 
+    @media (min-width: 1200px) {
+      font-size: ${({ height }) => `${height + 40}px`};
+      transform: translateY(-65px);
+      height: ${({ height }) => `${height + 60}px`};
+    }
+
     @media (min-width: 1500px) {
       font-size: ${({ height }) => `${height + 40}px`};
-      transform: translateY(-60px);
+      /* transform: translateY(-65px); */
       height: ${({ height }) => `${height + 60}px`};
     }
     /* transform: translateZ(0); */
