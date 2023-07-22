@@ -41,6 +41,15 @@ const VideoContainer = styled.div`
     overflow-clip-margin: content-box;
     overflow: clip;
 
+    .controls {
+      position: absolute;
+      width: 100%;
+      height: 8.0971659919028340080971659919028%; /* of figure's height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     @media (min-width: 1500px) {
       /* height: 250px; */
       height: ${({ height }) => `${height + 80}px`};
