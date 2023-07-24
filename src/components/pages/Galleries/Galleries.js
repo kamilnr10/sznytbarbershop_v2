@@ -13,10 +13,6 @@ const GalleriesSection = styled.section`
   margin: 80px 0 0;
   overflow-x: hidden;
 
-  h1 {
-    /* font-size: 80px; */
-  }
-
   h2 {
     text-align: center;
   }
@@ -32,6 +28,14 @@ const ImgContainer = styled.div`
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+  }
+`;
+
+const GalleryContainer = styled.div`
+  margin: 20px 0 0 0;
+
+  h2 {
+    margin: 20px 0 0 0;
   }
 `;
 
@@ -78,14 +82,14 @@ const Galleries = () => {
     <GalleriesSection>
       <h1>GALERIA</h1>
       {data.data.allGalleries.map((item) => (
-        <div key={item.id}>
+        <GalleryContainer key={item.id}>
           <h2>{item.name}</h2>
           <Link to={`/gallery/${item.id}`}>
             <ImgContainer>
               <img src={item.preview.url} alt="gallery_image" />
             </ImgContainer>
           </Link>
-        </div>
+        </GalleryContainer>
       ))}
     </GalleriesSection>
   );

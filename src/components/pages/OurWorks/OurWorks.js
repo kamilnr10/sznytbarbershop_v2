@@ -18,6 +18,14 @@ const SectionContainer = styled.div`
   align-items: center;
   overflow-x: hidden;
 
+  h1 {
+    text-align: center;
+  }
+
+  div:first-child {
+    margin: 20px 0 0 0;
+  }
+
   img {
     border-radius: 20px;
   }
