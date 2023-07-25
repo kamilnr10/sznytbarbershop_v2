@@ -8,6 +8,7 @@ import {
 } from "@react-google-maps/api";
 import styled from "styled-components";
 import { Header } from "../../atoms/HeaderText/HeaderText";
+import Loading from "../../organisms/Loading/Loading";
 
 const StyledAddress = styled.h3`
   color: black;
@@ -117,19 +118,24 @@ const FindUs = () => {
   const handleMarkerClick = (id, lat, lng, address) => {
     mapRef?.panTo({ lat, lng });
     setInfoWindowData({ id, address });
-    console.log(infoWindowData);
+    // console.log(infoWindowData);
     setIsOpen(true);
   };
   const options = {
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: false,
+    minZoom: 6,
+    maxZoom: 15,
   };
 
   return (
     <MapContainer>
       {!isLoaded ? (
-        <h1>Loading...</h1>
+        <>
+          <Loading />
+          <h1>Loading...</h1>
+        </>
       ) : (
         <>
           <Header>LOKALIZACJA</Header>
@@ -167,7 +173,7 @@ const FindUs = () => {
             onLoad={onMapLoad}
             onClick={() => setIsOpen(false)}
             options={options}
-            zoom={13}
+            zoom={15}
           >
             {markers.map(({ address, lat, lng }, ind) => (
               <MarkerF

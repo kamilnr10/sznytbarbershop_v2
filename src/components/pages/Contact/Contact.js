@@ -185,7 +185,7 @@ const Cut = styled.div`
   top: -20px;
   transform: translateY(0);
   transition: transform 200ms;
-  width: 76px;
+  width: 105px;
 `;
 
 const ErrorContainer = styled.div`

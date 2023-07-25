@@ -37,21 +37,21 @@ body {
   width: 10px;
 }
 
-&::-webkit-scrollbar-track {
-    background-color: darkgrey;
-}
+  &::-webkit-scrollbar-track {
+      background-color: darkgrey;
+  }
 
-&::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #b700ff;
-}
+  &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: #b700ff;
+  }
 
 }
 
   h1 {
     font-family: 'Alfa Slab One', sans-serif;
     color: #fff;
-    ${"" /* margin: 80px 0; */}
+
     font-size: 40px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -76,12 +76,8 @@ body {
   p {
     font-family: 'Ubuntu Mono', monospace;
     font-size: 14px;
-    ${"" /* letter-spacing: 1px; */}
     line-height: 1.3;
 
-    @media (min-width: 1200px) {
-     
-    }
 }
 `;
 
