@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import Loading from "../../organisms/Loading/Loading";
 
-const SectionContainer = styled.div`
+const OurWorksContainer = styled.div`
   width: 80vw;
   margin: 80px 0 0;
   position: absolute;
@@ -88,18 +89,22 @@ const OurWorks = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    setTimeout(() => {
+      fetchData();
+    }, 2000);
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <OurWorksContainer>
+        <Loading />
+      </OurWorksContainer>
+    );
   }
 
   return (
-    <SectionContainer>
+    <OurWorksContainer>
       <h1>{data.data.allGalleries[0].name}</h1>
-
-      {/* <ImageContainer> */}
       <ResponsiveMasonry
         columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
         style={{ width: "100%" }}
@@ -115,12 +120,7 @@ const OurWorks = () => {
           ))}
         </Masonry>
       </ResponsiveMasonry>
-
-      {/* {data.data.allGalleries[0].gallery.map((item) => (
-          <img src={item.url} alt="" />
-        ))} */}
-      {/* </ImageContainer> */}
-    </SectionContainer>
+    </OurWorksContainer>
   );
 };
 

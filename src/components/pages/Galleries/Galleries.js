@@ -2,8 +2,10 @@ import React, { useState, useCallback, useEffect } from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import Loading from "../../organisms/Loading/Loading";
 
 const GalleriesSection = styled.section`
+  position: absolute;
   width: 98vw;
   min-height: 100vh;
   display: flex;
@@ -22,6 +24,13 @@ const ImgContainer = styled.div`
   width: 300px;
   height: 300px;
   margin: 5px 0 25px;
+  transition: border 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+
+  &:focus,
+  &:hover {
+    border: 5px solid #b700ffa4; /* Change border style on hover */
+    border-radius: 50%; /* Create a circle effect on hover */
+  }
 
   img {
     width: 100%;
@@ -55,14 +64,17 @@ const Galleries = () => {
         },
         body: JSON.stringify({
           query:
-            "{ allGalleries { id name preview { id url } gallery { id url } } }",
+            "{ allGalleries { id name preview { id url } gallery { id url } priority } }",
         }),
       });
 
-      const myData = await response.json();
-
+      let myData = await response.json();
+      if (myData && myData.data?.allGalleries) {
+        // Sort the data by priority before setting it to the state
+        myData.data.allGalleries.sort((a, b) => a.priority - b.priority);
+      }
       setData(myData);
-      console.log(data.data.allGalleries);
+      console.log(myData.data.allGalleries);
       setLoading(false);
     } catch (error) {
       console.error("Błąd pobierania danych:", error);
@@ -75,7 +87,11 @@ const Galleries = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <GalleriesSection>
+        <Loading />
+      </GalleriesSection>
+    );
   }
 
   return (

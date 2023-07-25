@@ -10,6 +10,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { Header } from "../../atoms/HeaderText/HeaderText";
 import { EffectCoverflow, Pagination } from "swiper/modules";
+import Loading from "../../organisms/Loading/Loading";
 
 const TeamSection = styled.section`
   width: 100vw;
@@ -72,6 +73,7 @@ const TeamContainer = styled.div`
 `;
 
 const MemberContainer = styled.div`
+  position: relative;
   width: 300px;
   height: 500px;
   border-radius: 10%;
@@ -146,7 +148,7 @@ const Team = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (

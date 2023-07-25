@@ -3,11 +3,13 @@ import styled from "styled-components";
 import axios from "axios";
 import Slider from "react-animated-slider";
 import StarRatings from "react-star-ratings";
+import Loading from "../Loading/Loading";
 
 const ReviewsContainer = styled.div`
   padding: 0 5%;
 
   h1 {
+    margin: 20px 0;
     font-size: 40px;
   }
   @media (min-width: 1200px) {
@@ -199,11 +201,17 @@ const Reviews = () => {
   };
 
   useEffect(() => {
-    fetchReviews();
+    setTimeout(() => {
+      fetchReviews();
+    }, 1000);
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <ReviewsContainer>
+        <Loading />
+      </ReviewsContainer>
+    );
   }
 
   return (

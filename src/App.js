@@ -13,6 +13,7 @@ import FindUs from "./components/pages/FindUs/FindUs";
 import Galleries from "./components/pages/Galleries/Galleries";
 import OurWorks from "./components/pages/OurWorks/OurWorks";
 import Home from "./components/pages/Home/Home";
+import Loading from "./components/organisms/Loading/Loading";
 
 function App() {
   return (
