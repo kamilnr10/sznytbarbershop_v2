@@ -21,10 +21,11 @@ const OurWorksContainer = styled.div`
 
   h1 {
     text-align: center;
+    margin: 0 0 40px 0;
   }
 
   div:first-child {
-    margin: 20px 0 0 0;
+    /* margin: 20px 0 0 0; */
   }
 
   img {
